@@ -69,7 +69,7 @@ def index_page(username: Optional[str] = Cookie(default=None)):
         f"Привет, {users[valid_username]['name']}!<br />" 
         f"Баланс: {users[valid_username]['balance']}", media_type="text/html")
 
-
+# 
 @app.post("/login")
 def process_login_page(data: dict = Body(...)):
         username = data["username"]
